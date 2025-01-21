@@ -32,7 +32,9 @@ const emailSchema = new mongoose.Schema({
 
 // Email Model
 const Email = mongoose.model("Email", emailSchema);
-
+app.get("/",(req,res)=>{
+    return res.send("hello world");
+})
 // Route to store email
 app.post("/api/email", async (req, res) => {
   const { email } = req.body;
